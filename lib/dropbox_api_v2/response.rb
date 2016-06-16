@@ -6,8 +6,16 @@ module DropboxApiV2
       @curl_response = curl_response
     end
 
+    def json
+      JSON.parse(body)
+    end
+
     def body
-      JSON.parse(@curl_response.body)
+      @curl_response.body
+    end
+
+    def cursor
+      body["cursor"]
     end
   end
 end
