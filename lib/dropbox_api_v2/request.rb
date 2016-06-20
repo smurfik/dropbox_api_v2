@@ -30,7 +30,6 @@ module DropboxApiV2
     def headers
       headers = {"Authorization" => "Bearer #{@token}"}
       if @header_params
-        puts @body.inspect
         headers["Dropbox-API-Arg"] = json_params
         if @body
           headers["Content-Type"] = "application/octet-stream"
