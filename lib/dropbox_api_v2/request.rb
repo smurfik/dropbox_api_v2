@@ -30,17 +30,16 @@ module DropboxApiV2
     end
 
     def upload?
-      file_transfer? && @body
+      !!(file_transfer? && @body)
     end
 
     def download?
-      file_transfer? && !@body
+      !!(file_transfer? && !@body)
     end
 
     def file_transfer?
       @file_transfer
     end
-
 
     def content_type
       if upload?
