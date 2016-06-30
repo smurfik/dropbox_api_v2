@@ -15,7 +15,7 @@ module DropboxApiV2
     end
 
     def cursor
-      body["cursor"]
+      json["cursor"]
     end
   end
 end
