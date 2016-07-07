@@ -2,8 +2,9 @@ require 'json'
 
 module DropboxApiV2
   class Response
+    attr_reader :raw_response
     def initialize(curl_response)
-      @curl_response = curl_response
+      @raw_response = curl_response
     end
 
     def json
@@ -11,7 +12,7 @@ module DropboxApiV2
     end
 
     def body
-      @curl_response.body
+      @raw_response.body
     end
 
     def cursor
