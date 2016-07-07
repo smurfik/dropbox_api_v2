@@ -6,8 +6,8 @@ require 'dropbox_api_v2/version'
 Gem::Specification.new do |spec|
   spec.name          = "dropbox_api_v2"
   spec.version       = DropboxApiV2::VERSION
-  spec.authors       = ["smurfik"]
-  spec.email         = ["tammy@mlpinit.com"]
+  spec.authors       = ["smurfik", "Bookis Worthy"]
+  spec.email         = ["tammy@mlpinit.com", "bookis.worthy@gmail.com"]
 
   spec.summary       = %q{Ruby client library for the Dropbox Api V2}
   spec.homepage      = "https://github.com/smurfik/dropbox_api_v2"
