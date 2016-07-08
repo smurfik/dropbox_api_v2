@@ -21,4 +21,8 @@ module DropboxApiV2
   def self.search(file_path, token, args={})
     Request.new("/files/search", {path: file_path, token: token}.merge(args)).response
   end
+
+  def self.thumbnail(file_path, token, args={})
+    Request.new("/files/get_thumbnail", {format: "jpeg", size: "w64h64", path: file_path, token: token, file_transfer: true}.merge(args)).response
+  end
 end
