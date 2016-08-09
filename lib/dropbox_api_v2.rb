@@ -15,7 +15,7 @@ module DropboxApiV2
   end
 
   def self.upload(file_path, token, body)
-    Request.new("/files/upload", path: file_path, body: body, file_transfer: true, token: token).response
+    Request.new("/files/upload", path: file_path, body: body, file_transfer: true, token: token, mode: :overwrite, mute: true).response
   end
 
   def self.search(file_path, token, args={})
