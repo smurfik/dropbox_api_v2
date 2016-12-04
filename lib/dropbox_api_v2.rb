@@ -2,6 +2,11 @@ require "dropbox_api_v2/version"
 require "dropbox_api_v2/request"
 
 module DropboxApiV2
+
+  def self.find(path, token, args={})
+    Request.new("/files/get_metadata", {path: path, token: token}.merge(args)).response
+  end
+
   def self.list_folder(directory_path, token, args={})
     Request.new("/files/list_folder", {path: directory_path, token: token}.merge(args)).response
   end
